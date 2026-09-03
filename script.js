@@ -87,7 +87,14 @@ const VIDEOS = {
   "ai-generated-ugc": [
     { src: "assets/video/ai-generated-ugc/clip-1.mp4" },
   ],
-  "ai-cartoons-animation": [],
+  "ai-cartoons-animation": [
+  { src: "assets/video/ai-cartoons-animation/cartoon-1.mp4" },
+  { src: "assets/video/ai-cartoons-animation/cartoon-2.mp4" },
+  { src: "assets/video/ai-cartoons-animation/cartoon-3.mp4" },
+  { src: "assets/video/ai-cartoons-animation/cartoon-4.mp4" },
+  { src: "assets/video/ai-cartoons-animation/cartoon-5.mp4" },
+  { src: "assets/video/ai-cartoons-animation/cartoon-6.mp4" },
+],
   "static-ads": [],
 "localization": [
   { src: "assets/video/localization/clip-1-de.mp4", caption: "German adaptation" },
