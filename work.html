@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work — Alyona Adamova</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Instrument+Serif:ital@1&family=Newsreader:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo-mark" href="index.html" aria-label="Alyona Adamova — home">
+    <svg width="30" height="30" viewBox="0 0 100 100" fill="none">
+      <defs>
+        <linearGradient id="aGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#8be8cb"/>
+          <stop offset="100%" stop-color="#9c7a97"/>
+        </linearGradient>
+      </defs>
+      <path class="a-glyph" d="M20 85 L46 15 L54 15 L80 85" stroke="currentColor" stroke-width="9" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+      <line class="a-glyph" x1="30" y1="58" x2="70" y2="58" stroke="currentColor" stroke-width="9"/>
+    </svg>
+  </a>
+  <button class="nav-toggle">Menu</button>
+  <nav class="nav">
+    <a href="work.html" class="active">Work</a>
+    <a href="about.html">About</a>
+    <a href="cv.html">CV</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn-talk" href="contact.html">Let's talk</a>
+  </nav>
+</header>
+
+<div class="category-hero">
+  <a class="back" href="index.html">&larr; All work</a>
+  <h1 id="category-title">Loading…</h1>
+  <p id="category-desc"></p>
+</div>
+
+<nav class="pill-nav" id="pill-nav"></nav>
+
+<div class="video-grid" id="video-grid"></div>
+
+<footer class="site-footer">
+  © 2026 Alyona Adamova — Motion &amp; Graphic Designer
+</footer>
+
+<script src="script.js"></script>
+<script>initWorkPage();</script>
+</body>
+</html>
