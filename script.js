@@ -89,8 +89,11 @@ const VIDEOS = {
   ],
   "ai-cartoons-animation": [],
   "static-ads": [],
-  "localization": [],
-  "graphic-motion": [],
+"localization": [
+  { src: "assets/video/localization/clip-1-de.mp4", caption: "German adaptation" },
+  { src: "assets/video/localization/clip-1-it.mp4", caption: "Italian adaptation" },
+],  
+"graphic-motion": [],
   "illustration-branding": [],
   "social-content": [],
 };
