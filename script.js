@@ -88,19 +88,43 @@ const VIDEOS = {
     { src: "assets/video/ai-generated-ugc/clip-1.mp4" },
   ],
   "ai-cartoons-animation": [
-  { src: "assets/video/ai-cartoons-animation/cartoon-1.mp4" },
-  { src: "assets/video/ai-cartoons-animation/cartoon-2.mp4" },
-  { src: "assets/video/ai-cartoons-animation/cartoon-3.mp4" },
-  { src: "assets/video/ai-cartoons-animation/cartoon-4.mp4" },
-  { src: "assets/video/ai-cartoons-animation/cartoon-5.mp4" },
-  { src: "assets/video/ai-cartoons-animation/cartoon-6.mp4" },
-],
+    { src: "assets/video/ai-cartoons-animation/cartoon-1.mp4" },
+    { src: "assets/video/ai-cartoons-animation/cartoon-2.mp4" },
+    { src: "assets/video/ai-cartoons-animation/cartoon-3.mp4" },
+    { src: "assets/video/ai-cartoons-animation/cartoon-4.mp4" },
+    { src: "assets/video/ai-cartoons-animation/cartoon-5.mp4" },
+    { src: "assets/video/ai-cartoons-animation/cartoon-6.mp4" },
+  ],
   "static-ads": [],
-"localization": [
-  { src: "assets/video/localization/clip-1-de.mp4", caption: "German adaptation" },
-  { src: "assets/video/localization/clip-1-it.mp4", caption: "Italian adaptation" },
-],  
-"graphic-motion": [],
+  "localization": [
+    { src: "assets/video/localization/clip-1-de.mp4", caption: "German adaptation" },
+    { src: "assets/video/localization/clip-1-it.mp4", caption: "Italian adaptation" },
+    { src: "assets/video/localization/clip-2-de.mp4", caption: "German adaptation" },
+    { src: "assets/video/localization/clip-2-it.mp4", caption: "Italian adaptation" },
+    { src: "assets/video/localization/clip-1-es.mp4", caption: "Spanish adaptation" },
+    { src: "assets/video/localization/clip-2-es.mp4", caption: "Spanish adaptation" },
+    { src: "assets/video/localization/clip-3-es.mp4", caption: "Spanish adaptation" },
+    { src: "assets/video/localization/clip-4-es.mp4", caption: "Spanish adaptation" },
+    { src: "assets/video/localization/clip-5-es.mp4", caption: "Spanish adaptation" },
+    { src: "assets/video/localization/clip-6-es.mp4", caption: "Spanish adaptation" },
+    { src: "assets/video/localization/clip-7-es.mp4", caption: "Spanish adaptation" },
+    { src: "assets/video/localization/static_es.png", caption: "Spanish static" },
+    { src: "assets/video/localization/static_it.png", caption: "Italian static" },
+    { src: "assets/video/localization/static_ja.png", caption: "Japanese static" },
+    { src: "assets/video/localization/gr.png", caption: "German static" },
+    { src: "assets/video/localization/it.png", caption: "Italian static" },
+    { src: "assets/video/localization/ja.png", caption: "Japanese static" },
+    { src: "assets/video/localization/pb.png", caption: "Portuguese static" },
+    { src: "assets/video/localization/gr2.png", caption: "German static — v2" },
+    { src: "assets/video/localization/it-2.png", caption: "Italian static — v2" },
+    { src: "assets/video/localization/g4r.png", caption: "German static" },
+    { src: "assets/video/localization/i4t.png", caption: "Italian static" },
+    { src: "assets/video/localization/j4a.png", caption: "Japanese static" },
+    { src: "assets/video/localization/p4b.png", caption: "Portuguese static" },
+    { src: "assets/video/localization/es.png", caption: "Spanish static" },
+    { src: "assets/video/localization/fr.png", caption: "French static" },
+  ],
+  "graphic-motion": [],
   "illustration-branding": [],
   "social-content": [],
 };
@@ -137,10 +161,16 @@ function initWorkPage() {
     return;
   }
 
-  grid.innerHTML = clips.map((v) => `
+  grid.innerHTML = clips.map((v) => {
+    const isImage = v.type === "image" || /\.(png|jpe?g|webp|gif)$/i.test(v.src);
+    const media = isImage
+      ? `<img src="${v.src}" alt="${v.caption || ""}" loading="lazy">`
+      : `<video src="${v.src}" ${v.poster ? `poster="${v.poster}"` : ""} controls preload="metadata" playsinline></video>`;
+    return `
     <div class="video-card video-card--real">
-      <video src="${v.src}" ${v.poster ? `poster="${v.poster}"` : ""} controls preload="metadata" playsinline></video>
+      ${media}
       ${v.caption ? `<span>${v.caption}</span>` : ""}
     </div>
-  `).join("");
+  `;
+  }).join("");
 }
