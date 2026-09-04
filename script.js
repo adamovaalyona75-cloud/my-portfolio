@@ -131,7 +131,22 @@ const VIDEOS = {
   ],
   "graphic-motion": [],
   "illustration-branding": [],
-  "social-content": [],
+"social-content": [
+  { src: "assets/video/social-content/reel-1.mp4", caption: "Instagram Reel" },
+  { src: "assets/video/social-content/reel-2.mp4", caption: "Instagram Reel" },
+  { src: "assets/video/social-content/reel-3.mp4", caption: "Instagram Reel" },
+  { src: "assets/video/social-content/reel-4.mp4", caption: "Instagram Reel" },
+  { src: "assets/video/social-content/post-1-01.jpg", caption: "Carousel post" },
+  { src: "assets/video/social-content/post-1-03.jpg", caption: "Carousel post" },
+  { src: "assets/video/social-content/post-1-04.jpg", caption: "Carousel post" },
+  { src: "assets/video/social-content/post-2-01.jpg", caption: "Carousel post" },
+  { src: "assets/video/social-content/post-2-02.jpg", caption: "Carousel post" },
+  { src: "assets/video/social-content/post-2-03.jpg", caption: "Carousel post" },
+  { src: "assets/video/social-content/post-2-04.jpg", caption: "Carousel post" },
+  { src: "assets/video/social-content/post-3-01.mp4", caption: "Carousel post" },
+  { src: "assets/video/social-content/post-3-02.mp4", caption: "Carousel post" },
+  { src: "assets/video/social-content/post-3-03.mp4", caption: "Carousel post" },
+],
 };
 
 // Renders the pill navigation + heading + video grid on work.html
