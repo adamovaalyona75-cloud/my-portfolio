@@ -85,8 +85,13 @@ const CATEGORIES = [
 ============================================================ */
 const VIDEOS = {
   "ai-generated-ugc": [
-    { src: "assets/video/ai-generated-ugc/clip-1.mp4" },
-  ],
+  { src: "assets/video/ai-generated-ugc/creator-1.mp4" },
+  { src: "assets/video/ai-generated-ugc/creator-2.mp4" },
+  { src: "assets/video/ai-generated-ugc/creator-3.mp4" },
+  { src: "assets/video/ai-generated-ugc/creator-4.mp4" },
+  { src: "assets/video/ai-generated-ugc/creator-5.mp4" },
+  { src: "assets/video/ai-generated-ugc/creator-6.mp4" },
+],
   "ai-cartoons-animation": [
     { src: "assets/video/ai-cartoons-animation/cartoon-1.mp4" },
     { src: "assets/video/ai-cartoons-animation/cartoon-2.mp4" },
@@ -173,4 +178,13 @@ function initWorkPage() {
     </div>
   `;
   }).join("");
+
+  // Some AI-generated clips fade in from black, so the very first frame
+  // shows as a blank/black thumbnail. Nudge playback slightly forward
+  // once metadata is loaded so a real frame is visible while paused.
+  grid.querySelectorAll("video").forEach((v) => {
+    v.addEventListener("loadedmetadata", () => {
+      if (v.currentTime === 0) v.currentTime = Math.min(0.3, (v.duration || 1) / 4);
+    });
+  });
 }
