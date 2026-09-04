@@ -100,7 +100,17 @@ const VIDEOS = {
     { src: "assets/video/ai-cartoons-animation/cartoon-5.mp4" },
     { src: "assets/video/ai-cartoons-animation/cartoon-6.mp4" },
   ],
-  "static-ads": [],
+  "static-ads": [
+  { src: "assets/video/static-ads/ad-1.png" },
+  { src: "assets/video/static-ads/ad-2.png" },
+  { src: "assets/video/static-ads/ad-3.png" },
+  { src: "assets/video/static-ads/ad-4.png" },
+  { src: "assets/video/static-ads/ad-5.png" },
+  { src: "assets/video/static-ads/ad-6.png" },
+  { src: "assets/video/static-ads/ad-7.png" },
+  { src: "assets/video/static-ads/ad-8.png" },
+  { src: "assets/video/static-ads/ad-9.png" },
+],
   "localization": [
     { src: "assets/video/localization/clip-1-de.mp4", caption: "German adaptation" },
     { src: "assets/video/localization/clip-1-it.mp4", caption: "Italian adaptation" },
